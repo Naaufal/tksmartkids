@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Outfit:wght@400;500;600;700;900&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-display: 'Boogaloo', cursive;
+    --font-sans: 'Outfit', sans-serif;
+
+    --color-yellow: #FFD000;
+    --color-red: #E8272B;
+    --color-orange: #FF6B35;
+    --color-black: #0D0D0D;
+    --color-white: #FFFBF0;
+    --color-blue-pop: #1C4EFF;
+    --color-green-stamp: #00A86B;
+    --color-text-dark: #1A1A1A;
+    --color-text-light: #FFFBF0;
+
+    --shadow-brutalist-sm: 3px 3px 0px #0D0D0D;
+    --shadow-brutalist-md: 5px 5px 0px #0D0D0D;
+    --shadow-brutalist-lg: 8px 8px 0px #0D0D0D;
+    --shadow-brutalist-xl: 12px 12px 0px #0D0D0D;
+    --shadow-brutalist-red: 5px 5px 0px #E8272B;
+    --shadow-brutalist-yellow: 5px 5px 0px #FFD000;
+    --shadow-brutalist-blue: 5px 5px 0px #1C4EFF;
+}
+
+@utility text-comic {
+    color: #E8272B;
+    -webkit-text-stroke: 3px #0D0D0D;
+    paint-order: stroke fill;
+    font-family: var(--font-display);
+}
+
+@utility text-comic-yellow {
+    color: #FFD000;
+    -webkit-text-stroke: 3px #0D0D0D;
+    paint-order: stroke fill;
+    font-family: var(--font-display);
+}
+
+@utility text-comic-black {
+    color: #0D0D0D;
+    -webkit-text-stroke: 2px #FFD000;
+    paint-order: stroke fill;
+    font-family: var(--font-display);
+}
+
+@utility bg-halftone {
+    background-color: var(--color-yellow);
+    background-image: radial-gradient(
+        circle,
+        rgba(13, 13, 13, 0.15) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 12px 12px;
+}
+
+@utility bg-halftone-white {
+    background-color: var(--color-white);
+    background-image: radial-gradient(
+        circle,
+        rgba(13, 13, 13, 0.10) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 14px 14px;
+}
+
+@utility bg-halftone-red {
+    background-color: #E8272B;
+    background-image: radial-gradient(
+        circle,
+        rgba(255, 208, 0, 0.20) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 10px 10px;
+}
+
+@utility tilt-left-1 {
+    transform: rotate(-1deg);
+}
+
+@utility tilt-left-2 {
+    transform: rotate(-2.5deg);
+}
+
+@utility tilt-right-1 {
+    transform: rotate(1deg);
+}
+
+@utility tilt-right-2 {
+    transform: rotate(2.5deg);
+}
+
+@utility tilt-right-3 {
+    transform: rotate(3.5deg);
+}
+
+@utility stamp {
+    display: inline-block;
+    border: 4px solid #0D0D0D;
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    background: #FFD000;
+    box-shadow: 3px 3px 0px #0D0D0D;
+    transform: rotate(-2deg);
+    line-height: 1.2;
+}
+
+@utility stamp-red {
+    background: #E8272B;
+    color: #FFFBF0;
+    transform: rotate(2.5deg);
+}
+
+@utility stamp-black {
+    background: #0D0D0D;
+    color: #FFD000;
+    transform: rotate(-1deg);
+}
+
+@utility divider-fat {
+    height: 6px;
+    background: #0D0D0D;
+    width: 100%;
+}
+
+@utility divider-yellow {
+    height: 6px;
+    background: linear-gradient(90deg, #FFD000 50%, #E8272B 50%);
+}
+
+.btn-brutalist {
+    box-shadow: 8px 8px 0px #0D0D0D;
+    transform: translate(0, 0);
+    transition: box-shadow 80ms ease, transform 80ms ease;
+    border: 4px solid #0D0D0D;
+    border-radius: 4px;
+}
+
+.btn-brutalist:hover {
+    box-shadow: 3px 3px 0px #0D0D0D;
+    transform: translate(3px, 3px);
+}
+
+.btn-brutalist:active {
+    box-shadow: 0px 0px 0px #0D0D0D;
+    transform: translate(8px, 8px);
+}
+
+.input-brutalist {
+    border: 3px solid #0D0D0D;
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    background: #FFFBF0;
+    box-shadow: 4px 4px 0px #0D0D0D;
+    outline: none;
+    transition: box-shadow 80ms, transform 80ms;
+}
+
+.input-brutalist:focus {
+    box-shadow: 6px 6px 0px #1C4EFF;
+    transform: translate(-1px, -1px);
+}
